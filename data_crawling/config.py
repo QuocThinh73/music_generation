@@ -10,3 +10,4 @@ GENRES = [
 CRAWL_DELAY = 0.5  # seconds between requests
 OUTPUT_DIR = "crawled_data"
 AUDIO_DIR = "audio"
+TOTAL_PAGES = 50  # Number of pages to crawl for each genre
