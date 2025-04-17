@@ -16,8 +16,7 @@ def extract_genres(driver) -> list[str]:
         elem = driver.find_element(
             By.CSS_SELECTOR, "span.md\\:col-span-6.flex.flex-wrap.gap-3"
         )
-        raw = [a.text.strip() for a in elem.find_elements(By.TAG_NAME, "a")]
-        return [genre for genre in raw if genre in GENRES]
+        return [a.text.strip() for a in elem.find_elements(By.TAG_NAME, "a")]
     except Exception:
         return []
 
