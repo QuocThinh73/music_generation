@@ -1,9 +1,9 @@
 import os
 from tqdm import tqdm
-from config import BASE_SEARCH_URL, GENRES, OUTPUT_DIR, TOTAL_PAGES
-from browser import init_driver
-from menu_extractor import extract_audio_links_from_menu
-from processor import process_audio_page
+from data_crawling.config import BASE_SEARCH_URL, GENRES, OUTPUT_DIR, TOTAL_PAGES
+from data_crawling.browser import init_driver
+from data_crawling.menu_extractor import extract_audio_links_from_menu
+from data_crawling.processor import process_audio_page
 
 
 def loop_over_menu_pages(base_url: str, total_pages: int, driver, wait) -> list[str]:
