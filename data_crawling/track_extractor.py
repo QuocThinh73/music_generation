@@ -1,7 +1,7 @@
 import json
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from config import GENRES
+from data_crawling.config import GENRES
 
 
 def extract_track_info(driver, wait) -> dict:
