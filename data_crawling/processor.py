@@ -1,6 +1,8 @@
 import os
 import json
 import time
+from track_extractor import extract_track_info, extract_genres, extract_duration, extract_extra_info
+from downloader import download_audio_file
 
 def process_audio_page(
     audio_url: str,
@@ -9,11 +11,6 @@ def process_audio_page(
     index: int,
     output_dir: str
 ) -> dict:
-    from track_extractor import (
-        extract_track_info, extract_genres,
-        extract_duration, extract_extra_info
-    )
-    from downloader import download_audio_file
 
     driver.get(audio_url)
     info = extract_track_info(driver, wait)
