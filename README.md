@@ -1,1 +1,5 @@
-# music_generation
+# Music Generation
+
+```
+python scripts/crawl_data.py
+```
