@@ -1,7 +1,11 @@
+import sys
 import os
 import json
 import time
+
 from tqdm import tqdm
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from data_crawling.config import BASE_SEARCH_URL, GENRES, OUTPUT_DIR, TOTAL_PAGES
 from data_crawling.browser import init_driver
 from data_crawling.menu_extractor import extract_audio_links_from_menu
